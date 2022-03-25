@@ -9,6 +9,14 @@ header{
 header>div,header>nav{
     padding: 0px 100px 0px;
 }
+body,section,div,ul,li,a,p,h1,h2{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-size: 18px;
+}
 /* tag h-top樣式 */
 .h-top{
     /* 背景框 */
@@ -143,6 +151,29 @@ header>div,header>nav{
     width: 100%;
     height:auto;
 }
+
+/* 統一幫字體換造型 */
+a{
+    text-decoration: none;
+}
+h1,h2{
+    font-weight:bolder;
+    line-height: 1.5;
+}
+h1{
+    font-size:3rem;
+}
+h2{
+    font-size:2rem;
+    line-height:1.8;
+    margin-bottom: 20px;
+}
+p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom: 20px;
+}
+
 /* introduce樣式 */
 .intro{
     padding: 100px 200px 0px;
@@ -159,6 +190,7 @@ header>div,header>nav{
     padding-bottom: 100px;
     border-bottom: 1px solid #E0E5E9;
     display:flex;
+    justify-content:space-between;
 }
 .item-pic img{
     width: 100%;
@@ -166,6 +198,7 @@ header>div,header>nav{
 }
 .intro-box-text,.item-pic{
     width: 50%;
+    
 }
 .intro-box ul{
     list-style: none;
@@ -175,23 +208,12 @@ header>div,header>nav{
 }
 .intro-box li{
     width: 50%;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 500;
 }
 .intro-box:nth-child(2n+1){
     /* 讓圖片文字位子相反 */
     flex-direction: row-reverse;
-}
-.intro-box li::before{
-    content: "\f00c";
-    width:inherit;
-    height: inherit;
-    margin-right: 5px;
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    background-color:#DEEBFF;
-    color:#005EFF;
-    border-radius: 50%;
 }
 .intro-box:last-of-type{
     margin-bottom: 0px;
