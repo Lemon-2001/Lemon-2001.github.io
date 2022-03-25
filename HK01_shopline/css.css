@@ -174,7 +174,7 @@ p{
     margin-bottom: 20px;
 }
 
-/* introduce樣式 */
+/* tag intro樣式 */
 .intro{
     padding: 100px 200px 0px;
 } 
@@ -190,15 +190,13 @@ p{
     padding-bottom: 100px;
     border-bottom: 1px solid #E0E5E9;
     display:flex;
-    justify-content:space-between;
 }
-.item-pic img{
+.intro-box-img img{
     width: 100%;
     height: auto;
 }
-.intro-box-text,.item-pic{
+.intro-box-text,.intro-box-img{
     width: 50%;
-    
 }
 .intro-box ul{
     list-style: none;
@@ -208,8 +206,11 @@ p{
 }
 .intro-box li{
     width: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-weight: 500;
+}
+.intro-box:last-of-type{
+    margin-bottom: 0px;
 }
 .intro-box:nth-child(2n+1){
     /* 讓圖片文字位子相反 */
@@ -217,4 +218,99 @@ p{
 }
 .intro-box:last-of-type{
     margin-bottom: 0px;
+}
+
+/*  更多功能與服務   */
+.mores{
+    background-color:rgb(244, 245, 247);
+    padding:75px 50px 25px;
+}
+.mores h2{
+    margin-bottom:50px;
+    text-align: center;
+}
+.mores h3{
+    font-size: 25px;
+    text-align:center;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.mores p{
+    text-align:center;
+    margin-bottom: 5px;
+}
+.mores ul{
+    list-style: none;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    margin-bottom:16px;
+}
+.mores li{
+    width: 300px;
+    margin:0px 60px 60px;
+    text-align:center;
+}
+.mores-box{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 30px;
+    box-shadow: 0 0 12px rgb(36 50 66 / 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mores-box img{
+    width: 60%;
+    height: auto;
+}
+
+/* shop商店樣式 */
+.shop{
+    padding: 70px 130px;
+}
+.shop h2{
+    text-align: center;
+    margin-bottom:20px;
+}
+.shop h2>span{
+    color:#0061FF;
+}
+.shop ul{
+    list-style: none;
+    border-bottom: 1px solid grey;
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.shop li{
+    width:calc(100% / 5);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 3px solid transparent;
+}
+.shop li:hover,.shop li.click{
+    border-color: #0061FF;
+}
+.shop li img{
+    width:auto;
+    height: 80px;
+}
+.showcase-content{
+    display:flex;
+    margin-bottom:30px;
+}
+.showcase-content span{
+    position: absolute;
+    bottom:0px;
+    left: 0px;
+}
+.content-text p{
+    margin-top:30px;
 }
