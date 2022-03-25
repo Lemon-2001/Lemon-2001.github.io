@@ -143,3 +143,56 @@ header>div,header>nav{
     width: 100%;
     height:auto;
 }
+/* introduce樣式 */
+.intro{
+    padding: 100px 200px 0px;
+} 
+.intro-title{
+    margin-bottom:120px;
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    text-align: center;
+}
+.intro-box{
+    margin-bottom:100px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #E0E5E9;
+    display:flex;
+}
+.item-pic img{
+    width: 100%;
+    height: auto;
+}
+.intro-box-text,.item-pic{
+    width: 50%;
+}
+.intro-box ul{
+    list-style: none;
+    display:flex;
+    margin-bottom: 15px;
+    flex-flow:row wrap;
+}
+.intro-box li{
+    width: 50%;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.intro-box:nth-child(2n+1){
+    /* 讓圖片文字位子相反 */
+    flex-direction: row-reverse;
+}
+.intro-box li::before{
+    content: "\f00c";
+    width:inherit;
+    height: inherit;
+    margin-right: 5px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    background-color:#DEEBFF;
+    color:#005EFF;
+    border-radius: 50%;
+}
+.intro-box:last-of-type{
+    margin-bottom: 0px;
+}
