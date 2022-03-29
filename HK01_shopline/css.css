@@ -314,3 +314,113 @@ p{
 .content-text p{
     margin-top:30px;
 }
+
+/* footer樣式 */
+footer>div{
+    padding:50px 130px 0px;
+}
+.footer-map{
+    height:350px;
+    background: url("img/bg2.png") 
+    no-repeat -250px -85px/auto 360px #172B4D;
+    position: relative;
+}
+.footer-map h2{
+    color: #fff;
+    margin-bottom:40px;
+}
+.footer-map img{
+    position:absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.footer-map a{
+    color: #fff;
+    min-width: 100%;
+    background-color: #0061FF;
+    border-radius: 30px;
+    padding: 15px 60px 15px 120px;
+    position: relative;
+}
+.footer-map a i{
+   padding-left:50px;
+}
+.footer-list{
+    background-color: #00142D;
+    position: relative;
+}
+.footer-list>div{
+    position: relative;
+    padding-bottom: 80px;
+}
+.footer-list hr{
+    border: 1px solid #1764e9;
+    margin-top: 40px;
+    margin-bottom:40px;
+}
+.footer-list h3{
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.footer-list ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-list li{
+    margin-bottom: 15px;
+}
+.footer-list li a{
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.covid-19{
+    display: inline-block;
+    width: 225px;
+    text-align: center;
+    background-color: rgb(219, 248, 237);
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.covid-19 a{
+    color: rgb(0, 0, 0);
+}
+#footer-bottom{
+    padding-bottom: 30px;
+    display:flex;
+    justify-content:space-between;
+}
+#footer-bottom ul{
+    display:flex;
+}
+#footer-bottom li a{
+    color: #fff;
+    padding: 0px 10px 0px;
+}
+#footer-bottom li:not(:first-child) a{
+    border-left: 1px #fff solid;
+}
+.button-group{
+    display: flex;
+}
+.button-group a{
+    width: 40px;
+    height: 40px;
+    background-color:#172B4D;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    margin: 0px 15px 0px;
+    color: #fff;
+}
+.button-group+div{
+    color: rgba(255,255,255,0.4);
+}
+
