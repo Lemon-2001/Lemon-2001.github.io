@@ -1,0 +1,178 @@
+@import url(..HK02-1_position/reset.css);
+:root{
+    --box-head_width:360px;
+    --box-head-h1_height:120px;
+    --box_width:960px;
+}
+html{
+    font-size:16px;
+}
+
+// 統一字形
+h1{
+    font-size:3rem;
+    font-weight:100;
+    text-align:center;
+    width:100%;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight:700;
+}
+p{
+    font-size:1.1rem;
+    line-height:1.5;
+}
+
+// 大盒子設定
+.box{
+    width: var(--box_width);
+    position: relative;
+    padding-top: var(--box-head-h1_height);
+    margin: 100px auto 0px;
+}
+// 盒子上區塊
+.box-head{
+    width:var(--box-head_width);
+    position: absolute;
+    color: #fff;
+    z-index: 3;
+
+    h1{
+        background-color:red;
+        height: var(--box-head-h1_height);
+    }
+    span{
+        writing-mode: vertical-lr;
+        vertical-align: middle;
+        line-height: 1;
+        font-size:var(--box-head-h1_height);
+    }
+}
+.box-head-text{
+    background-color:black;
+    padding: 15px;
+
+    p{
+        margin:10px 0px 20px;
+    }
+}
+
+// 盒子偶數設定
+.box:nth-child(odd) {
+    .box-head{
+        top: 0px;
+        left: 0px;
+    }
+}
+// 盒子基數設定
+.box:nth-child(even) {
+    .box-head{
+        top: 0px;
+        right: 0px;
+    }
+}
+
+
+// 圖片設定
+.box-img{
+    position:relative;
+    width:min-content;
+    top: 0;
+    z-index: 2;
+}
+.box:nth-child(odd) {
+    .box-img{
+        margin-left: calc(var(--box-head_width) / 2);
+    }
+    .box-img:before{
+        left: 660px;
+    }
+    // 灰色盒子偶數
+    .box-grey{
+        right: 0px;
+    }
+    // 內容盒子偶數
+    .box-content{
+        left: 50px;
+    }
+}
+.box:nth-child(even) {
+    .box-img{
+        left: 0px;
+    }
+    .box-img:before{
+        left: -10px;
+    }
+    // 灰色盒子基數
+    .box-grey{
+        right: calc(var(--box-head_width)/2);
+    }
+    // 內容盒子基數
+    .box-content{
+        left: calc(var(--box_width) - 700px);
+    }
+}
+.box-img:before{
+    content:url(img/video.png);
+    position:absolute;
+    top: 200px;
+    z-index: 4;
+}
+
+// 灰色盒子設定
+.box-grey{
+    width: 450px;
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.1);
+    position:absolute;
+    top: 20px;
+    z-index: 1;
+}
+
+// 內容盒子設定
+.box-content{
+    width: 700px;
+    padding: 20px 0px 30px 30px;
+    position: relative;
+    /* mt-2em */
+    top: -40px;
+    background-color: #eee;
+    z-index: 3;
+
+    h3{
+        height:25px;
+        color:rgb(202, 0, 0)
+    }
+    li{
+        span{
+            display: inline-block;
+            padding: 5px 10px 5px;
+            background-color:black;
+            color:#FFF;
+        }
+        p{
+            margin: 10px 0px 10px;
+            padding-left: 10px;
+            position: relative;
+            /* text-indent: -1em; */
+        }
+        p:before{
+            content: '▪';
+            color:red;
+        }
+    }
+}
+
+// 紅線設定
+.red-line{
+    display: inline-block;
+    width: 450px;
+    margin-left: 10px;
+    border: 1px solid rgb(202, 0, 0);
+    background-color: rgb(202, 0, 0);
+    position:relative;
+    bottom: 5px;
+}
+
+
