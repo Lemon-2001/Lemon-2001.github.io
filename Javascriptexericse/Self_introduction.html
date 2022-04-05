@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="picture">
+            <img src="https://github.com/Lemon-2001/FileStoreage/blob/main/001.jpg?raw=true" alt="">
+        </div>
+        <div class="intro">
+            <div id="name">姓名:</div>
+            <div id="email">信箱:</div>
+            <div id="school">學校:</div>
+            <div id="interest">興趣:</div>
+        </div>
+        
+    <script>
+        let name = document.getElementById("name");
+        let school = document.getElementById("school");
+        let email = document.getElementById("email");
+        let interest = document.getElementById("interest");
+
+        name.innerText += "Cruella";
+        school.innerText += "Disney大學";
+        email.innerText += "Cruella@gmail.com";
+        interest.innerText += "時尚服裝";
+        document.write("<br>");
+        const imageArray = [
+        "https://img.onl/NpT0R",
+        "https://img.onl/llVKYA",
+        "https://img.onl/gxivg"
+        ];
+        imageArray.forEach((url, index) => {
+            document.write(`<img src=${url}>`);
+        });
+    </script>
+    </section>
+</body>
+</html>
