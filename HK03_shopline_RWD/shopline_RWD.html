@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c8cecb51ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./RWD.css">
+    <title>作業四 - SHOPLINE (RWD)</title>
+</head>
+
+<body>
+    <!-- 漢堡按鈕 -->
+    <input type="checkbox" name="" id="menu-control">
+    <header class="header"><!-- 最上面那行 + 第二行目錄區塊 -->
+        <!-- 最上面那行 -->
+        <div class="h-top">
+            <div class="globe">
+                <a href="#">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+            </div>
+            <a > | </a>
+            <div class="customer-service">
+                <div>
+                    <a href="#">幫助中心</a>
+                    <a href="#">登入網店</a>
+                </div>
+            </div>
+        </div>
+        <!-- 第二行目錄區塊 -->
+        <div class="h-menu">
+            <div class="h-logo">
+                <a href="#">
+                    <img src="https://picsum.photos/250/42/?random=10">
+                </a>
+            </div>
+            <!-- 漢堡標籤 -->
+            <label for="menu-control" class="hb">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="menu-customer-service">
+                <nav class="menu-nav">
+                    <ul>
+                        <li><a href="#">開店服務</a></li>
+                        <li><a href="#">方案費用</a></li>
+                        <li><a href="#">客戶案例</a></li>
+                        <li><a href="#">開店說明</a></li>
+                        <li><a href="#">開店諮詢</a></li>
+                        <li><a href="#">更多解決方案</a></li>
+                        <li><a href="#">其他資源</a></li>
+                    </ul>
+                </nav>
+                <!-- 電腦版按鈕 -->
+                <div class="menu-button">
+                    <button class="btn-free">免費試用</button>
+                    <button class="btn-login">登入網店</button>
+                </div>
+                <!-- 手機版按鈕 -->
+                <div class="menu-phone">
+                    <a href="#">免費試用</a>
+                    <a href="#">登入商店</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main screen主畫面 -->
+    <section class="main-screen-box">
+        <div class="main-screen-text">
+            <div class="sample-advertise">
+                <h1>想在哪開店創業?</h1>
+                <span class="text-H1">門市必備零售 POS 系統|</span>
+            </div>
+            <p>超過 35 萬品牌使用！從個人賣家到國際品牌，都能以 SHOPLINE 實現全通路零售，快速拓展市場到世界各地，輕鬆開始你的『 店 』商生意！</p>
+            <div class="sample-button">
+                <input type="email" placeholder="請在此輸入電子信箱(可隨時更換)">
+                <button>免費試用</button>
+            </div>
+        </div>
+        <div class="main-screen-img">
+            <img src="https://picsum.photos/505/368/?random=10">
+        </div>
+    </section>
+    <!-- 介紹第一段intro -->
+    <section class="intro">
+        <div class="intro-title">
+            <h2>單一平台就能助你<br>在全通路輕鬆開店創業</h2>
+            <p>從網路商店架站到實體門市管理，只需要一個平台，就能輕鬆實現開店創業，
+                <br>並能同步管理所有銷售管道，SHOPLINE 助你賣得更多、賣得更好！
+            </p>
+        </div>
+
+        <!-- 第一段圖文 -->
+        <div class="intro-box">
+            <div class="intro-box-img">
+                <img src="https://picsum.photos/936/549/?random=1">
+            </div>
+            <div class="main-test">
+                <h3>免寫程式、多款版型<br>
+                    輕鬆打造全能電商網站
+                </h3>
+                <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。
+                </p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>豐富版型主題與字型搭配</li>
+                    <li><i class="fa-solid fa-check"></i>RWD 響應式網頁設計</li>
+                    <li><i class="fa-solid fa-check"></i>獨有網址 ＆ SSL 安全憑證</li>
+                    <li><i class="fa-solid fa-check"></i>SEO 搜尋引擎優化</li>
+                    <li><i class="fa-solid fa-check"></i>一頁商店</li>
+                    <li><i class="fa-solid fa-check"></i>開放 HTML／CSS 編輯</li>
+                </ul>
+                <a href="#">看看開店祕技<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <!-- 第二段圖文 -->
+        <div class="intro-box">
+            <div class="intro-box-img">
+                <img src="https://picsum.photos/936/549/?random=2">
+            </div>
+            <div class="main-test">
+                <h3>支持海內外電商<br>
+                    金流、物流一次搞定
+                </h3>
+                <p>支持在地及國際金流、物流串接服務，提供海內外顧客最便利的付款及送貨服務，加速消費者完成下單交易，大幅降低購物車放棄率！
+                </p>
+                <ul>
+                    <li><span><i class="fa-solid fa-check"></i></span>線上信用卡刷卡</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>超商代碼／條碼繳費</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>超商／宅配貨到付款</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>第三方金流／行動支付整合</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>多溫層宅配並指定運費</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>發票開立與串接</li>
+                </ul>
+                <a href="#">了解更多金物流<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <!-- 第三段圖文 -->
+        <div class="intro-box">
+            <div class="intro-box-img">
+                <img src="https://picsum.photos/936/549/?random=3">
+            </div>
+            <div class="main-test">
+                <h3>刺激下單，創造回購<br>
+                    行銷導流、促購模組任你玩
+                </h3>
+                <p>多元優惠活動、會員集客機制、網紅分潤以及直播購物等豐富功能，將電商行銷玩法一網打盡，助你成功優化行銷活動成效，刺激顧客下單、吸引鐵粉回購！
+                </p>
+                <ul>
+                    <li><span><i class="fa-solid fa-check"></i></span>超過 20 種優惠促銷功能</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>社群直播購物系統</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>會員分級／點數／購物金</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>Facebook／Google／LINE 廣告追蹤</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>Instagram 購物功能</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>Facebook／Instagram／LINE 對話式購物</li>
+                </ul>
+                <a href="#">看更多優惠模組<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <!-- 第四段圖文 -->
+        <div class="intro-box">
+            <div class="intro-box-img">
+                <img src="https://picsum.photos/936/549/?random=4">
+            </div>
+            <div class="main-test">
+                <h3>O2O 全通路無縫整併<br>
+                    輕鬆管理網店、門市以及其他通路
+                </h3>
+                <p>不論是網店拓展門市，還是門市想發展網路生意，從商品、庫存、訂單等各項虛實店舖的資料都能完善整併，輕鬆實現全通路會員經營到多店營運。
+                </p>
+                <ul>
+                    <li><span><i class="fa-solid fa-check"></i></span>門市 POS 系統</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>線上線下會員／商品／庫存整合</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>門市快速集客工具</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>O2O 即時銷售報表分析</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>進銷庫存／調撥／多店管理</li>
+                    <li><span><i class="fa-solid fa-check"></i></span>串接 Shopee 蝦皮購物庫存</li>
+                </ul>
+                <a href="#">了解更多全通路整合<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- 更多功能與服務 mores + 人氣推薦 + 全亞洲超過-->
+    <section class="more-service">
+        <!-- 更多功能與服務 mores -->
+        <section class="mores">
+            <h2>
+                更多功能與服務
+            </h2>
+            <ul>
+                <li><!-- 第1個圈圈 -->
+                    <div class="mores-box">
+                        <img src="https://picsum.photos/72/70/?random=1"  >
+                    </div>
+                    <h3>強大庫存及訂單系統</h3>
+                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                </li>
+                <li><!-- 第2個圈圈 -->
+                    <div class="mores-box">
+                        <img src="https://picsum.photos/72/70/?random=2"  >
+                    </div>
+                    <h3>強大庫存及訂單系統</h3>
+                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                </li>
+                <li><!-- 第3個圈圈 -->
+                    <div class="mores-box">
+                        <img src="https://picsum.photos/72/70/?random=3"  >
+                    </div>
+                    <h3>強大庫存及訂單系統</h3>
+                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                </li>
+                <li><!-- 第4個圈圈 -->
+                    <div class="mores-box">
+                        <img src="https://picsum.photos/72/70/?random=4"  >
+                    </div>
+                    <h3>強大庫存及訂單系統</h3>
+                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                </li>
+                <li><!-- 第5個圈圈 -->
+                    <div class="mores-box">
+                        <img src="https://picsum.photos/72/70/?random=5"  >
+                    </div>
+                    <h3>強大庫存及訂單系統</h3>
+                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                </li>
+                <li><!-- 第6個圈圈 -->
+                    <div class="mores-box">
+                        <img src="https://picsum.photos/72/70/?random=6"  >
+                    </div>
+                    <h3>強大庫存及訂單系統</h3>
+                    <p>從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。</p>
+                </li>
+            </ul>
+        </section>
+        <!-- 人氣商店shop -->
+        <div class="case-introduce">
+            <div class="case-title">
+                <p><span>人氣品牌</span>一致推薦使用</p>
+            </div>
+            <ul class="click">
+                <li>
+                    <img src="https://picsum.photos/72/70/?random=6">
+                </li>
+                <li>
+                    <img src="https://picsum.photos/72/70/?random=7">
+                </li>
+                <li>
+                    <img src="https://picsum.photos/72/70/?random=8">
+                </li>
+                <li>
+                    <img src="https://picsum.photos/72/70/?random=9">
+                </li>
+                <li>
+                    <img src="https://picsum.photos/72/70/?random=10">
+                </li>
+            </ul>
+            <div class="case-data">
+                <div class="case-data-test">
+                    <a href="#">bonnyread.com.tw</a>
+                    <p>SHOPLINE 在行動裝置上操作的順暢度很高；使用者給的建議與意見會採納，處理的速度也不錯；還一直有新功能推出，不斷成長。</p>
+                    <span>- BONNY & READ 店長,Stan</span>
+                </div>
+                <div class="case-data-picture">
+                    <img src="https://picsum.photos/720/280/?random=11">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="worldwide-bar">
+        <div class="worldwide">
+            <p>全亞洲超過<br>
+                <span>350,000</span> 個品牌都在使用 SHOPLINE
+            </p>
+            <button class="worldwide-btn">免費試用14天</button>
+        </div>
+    </section>
+    <input type="checkbox" id="list-control-shoppline">
+    <input type="checkbox" id="list-control-open-shop">
+    <input type="checkbox" id="list-control-fuction">
+    <input type="checkbox" id="list-control-resource">
+    <input type="checkbox" id="list-control-way">
+    <input type="checkbox" id="list-control-else-fuction">
+    <input type="checkbox" id="list-control-actual">
+    <section class="severse_all_list">
+        <div class="severse_alone_list">
+            <div class="list-title">
+                <label for="list-control-shoppline">
+                    <h4>SHOPLINE</h4>
+                </label>
+            </div>
+            <ul class="control-shoppline">
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">認識團隊</a></li>
+                <li><a href="#">人才招募</a></li>
+                <li><a href="#">合作機會</a></li>
+                <li><a href="#">精選夥伴</a></li>
+                <li><a href="#">媒體報導</a></li>
+            </ul>
+        </div>
+        <div class="severse_alone_list">
+            <div class="list-title">
+                <label for="list-control-open-shop">
+                    <h4>我要開店</h4>
+                </label>
+            </div>
+            <ul class="control-open-shop">
+                <li><a href="#">方案費用</a></li>
+                <li><a href="#">功能模組</a></li>
+                <li><a href="#">客戶案例</a></li>
+                <li><a href="#">開店說明會</a></li>
+                <li><a href="#">開店諮詢</a></li>
+            </ul>
+        </div>
+        <div class="severse_alone_list">
+            <div class="list-title">
+                <label for="list-control-fuction">
+                    <h4>功能特色</h4>
+                </label>
+            </div>
+            <ul class="control-fuction">
+                <li><a href="#">網路開店</a></li>
+                <li><a href="#">社群購物</a></li>
+                <li><a href="#">零售POS</a></li>
+                <li><a href="#">網路商店</a></li>
+                <li><a href="#">網站製作</a></li>
+                <li><a href="#">電商物流</a></li>
+                <li><a href="#">訂單管理</a></li>
+                <li><a href="#">一頁商店</a></li>
+            </ul>
+        </div>
+        <div class="severse_alone_list">
+            <div class="list-title">
+                <label for="list-control-resource">
+                    <h4>開店資源</h4>
+                </label>
+            </div>
+            <ul class="control-resource">
+                <li><a href="#">開店秘技</a></li>
+                <li><a href="#">版型主題</a></li>
+                <li><a href="#">新手問答</a></li>
+                <li><a href="#">POS硬體</a></li>
+                <li><a href="#">最新功能</a></li>
+            </ul>
+        </div>
+        <div class="severse_alone_list">
+            <div class="list-title">
+                <label for="list-control-way">
+                    <h4>更多解決方案</h4>
+                </label>
+            </div>
+            <ul class="control-way">
+                <li><a href="#">企業旗艦方案</a></li>
+                <li><a href="#">跨境電商方案</a></li>
+                <li><a href="#">廣告計畫方案</a></li>
+            </ul>
+        </div>
+        <div class="severse_alone_list">
+            <div class="list-title">
+                <label for="list-control-else-fuction">
+                    <h4>其他資源</h4>
+                </label>
+            </div>
+            <ul class="control-else-fuction">
+                <a href="#">電商教室</a>
+                <a href="#">充電工作坊</a>
+                <a href="#">DreamBig創品牌</a>
+                <a href="#">電商成長學苑</a>
+                <a href="#">SHOPLINE TRENDS 電商數據庫</a>
+                <a href="#">LINE 官方帳號</a>
+            </ul>
+        </div>
+        <div class="severse_alone_list">
+            <div class="list-title">
+                <label for="list-control-actual">
+                    <h4>應用案例</h4>
+                </label>
+            </div>
+            <ul class="control-actual">
+                <a href="#">SHOPLINE Payments</a>
+                <a href="#">網紅口碑行銷方案</a>
+                <a href="#">實體零售</a>
+                <a href="#">IG 直播 +1</a>
+                <a href="#">社群電商工具包</a>
+            </ul>
+        </div>
+        <div class="covid19">
+            <a href="#">COVID-19應變措施</a>
+        </div>
+    </section>
+    <footer class="footer-end">
+        <div class="footer-info">
+            <div class="terms">
+                <ul>
+                    <li><a href="#">網站地圖</a></li>
+                    <li><a href="#">隱私權政策</a></li>
+                    <li><a href="#">會員條款</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-youtube-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-line"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-square-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="severse_times">
+            <p>服務時間 星期一至五 上午 10 點至晚上 7 點© Copyright 2013-22 SHOPLINE Limited.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
