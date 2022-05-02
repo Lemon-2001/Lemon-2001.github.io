@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guessing_num</title>
+    <style>
+        *, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 180px);
+    grid-template-rows: minmax(150px, auto) repeat(5, 60px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px, solid #FFFFFF;
+    outline: none;
+    background-color: rbga(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+    background-color: #a9a9a9;
+}
+
+.span-two {
+    grid-column: span 1;
+    color: #adf802;
+    background-color: rgba(139, 0, 139, 0.8);
+}
+.btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+#reset{
+    width: 540px;
+    height: 50px;
+    background-color: blue;
+    color: whitesmoke;
+    
+}
+.showup{
+    margin: auto;
+    text-align: center;
+    border: 1px solid;
+    width: 540px;
+    margin-top: 20px;
+    background-color: white;
+}
+#msg{
+    line-height: 2.3;
+    margin: auto;
+    width: 540px;
+    height: 40px;
+
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 20px 0;
+}
+
+.output .previous-operand{
+    color: rgba(255,255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="btn">
+        <button id="reset">RESET</button>
+    </div>
+
+    <div class="showup">
+        <p id="msg">
+            <p>目前範圍:
+                <span id='small'></span>
+                ~
+                <span id='big'></span>
+            </p>
+        </p>
+    </div>
+        
+    <div class="calculator-grid">
+        
+    
+        <div class="output" id='num'>
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand" ></div>
+        </div>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-all-clear class="span-two">x</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two" onclick='check()'>v</button>
+
+    </div>
+
+    </div>
+    <script>
+        var result,input,msg;
+        var big = 100;
+        var small = 0;
+
+        (function ready(){
+        result = Math.floor(Math.random()*101);
+        console.log(result);
+        if(result>=1 || result <=100){
+            msg = '亂數準備好了，遊戲開始!';
+        }else{
+            result = Math.floor(Math.random()*101);
+            msg = '亂數準備好了，遊戲開始!';
+        }
+        document.getElementById('msg').innerHTML = msg;
+        document.getElementById('big').innerHTML = big;
+        document.getElementById('small').innerHTML = small;
+        }());
+
+        function check(){
+        input = document.getElementById('num').value;
+        if(input == ""){
+            msg = "你什麼都沒有打啊孩子";
+        }
+        else if (input == 0){
+            msg = "打0是打心酸的嗎XDDDDD";
+        }
+        else if(result>input && input < big ){
+            msg = '比'+input+'還大';
+            small = input;
+        }
+        else if(result<input && input > small ){
+            msg = '比'+input+'還小';
+            big = input;
+        }
+        else if (result == input){
+            msg = '恭喜你猜對了! 答案是'+result+'。遊戲結束!';
+        }
+        else if (input <= small || input >= big ){
+            msg = '拜託打數字內的啦XDDDDD';
+        }
+
+        console.log(big+'/'+small+'/'+input);
+        document.getElementById('msg').innerHTML = msg;
+        document.getElementById('big').innerHTML = big;
+        document.getElementById('small').innerHTML = small;
+        }
+
+
+
+
+    class Calculator {
+        constructor(previousOperandTextElement,
+        currentOperandTextElement) {
+        this.previousOperandTextElement = previousOperandTextElement
+        this.currentOperandTextElement = currentOperandTextElement
+        this.clear()
+    }
+
+    clear() {
+        this.currentOperand = ''
+        this.previousOperand = ''
+        this.operation = undefined
+    }
+
+    delete() {
+        this.currentOperand = this.currentOperand.toString().slice(0, -1)
+    }
+
+    
+
+    appendNumber(number) {
+        if (number === '.' && this.currentOperand.includes('.')) return
+        this.currentOperand = this.currentOperand.toString() + number.toString()
+    }
+
+    
+
+    getDisplayNumber(number) {
+        const stringNumber = number.toString()
+        const integerDigits = parseFloat(stringNumber.split('.')[0])
+        const decimalDigits = stringNumber.split('.')[1]
+        let integerDisplay
+        if (isNaN(integerDigits)) {
+            integerDisplay = ''
+        } else {
+            integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
+        }
+        if (decimalDigits != null) {
+            return `${integerDisplay}.${decimalDigits}`
+        } else {
+            return integerDisplay
+        }
+    }
+
+    updateDisplay() {
+        this.currentOperandTextElement.innerText =
+            this.getDisplayNumber(this.currentOperand)
+        if (this.operation != null) {
+            this.previousOperandTextElement.innerText =
+                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        } else {
+            this.previousOperandTextElement.innerText = ''
+        }
+    }
+}
+
+
+const numberButtons = document.querySelectorAll('[data-number]')
+const equalsButton = document.querySelector('[data-equals]')
+const deleteButton = document.querySelector('[data-delete]')
+const allClearButton = document.querySelector('[data-all-clear]')
+const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+const currentOperandTextElement = document.querySelector('[data-current-operand]')
+
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+
+equalsButton.addEventListener('click', button => {
+    calculator.updateDisplay()
+})
+
+allClearButton.addEventListener('click', button => {
+    calculator.clear()
+    calculator.updateDisplay()
+})
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
