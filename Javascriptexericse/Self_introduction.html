@@ -34,11 +34,13 @@
         email.innerText += "Cruella@gmail.com";
         interest.innerText += "時尚服裝";
         document.write("<br>");
+        // 影像陣列
         const imageArray = [
         "https://img.onl/NpT0R",
         "https://img.onl/llVKYA",
         "https://img.onl/gxivg"
         ];
+        // (每個迭代的項目, 索引值)
         imageArray.forEach((url, index) => {
             document.write(`<img src=${url}>`);
         });
