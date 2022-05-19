@@ -151,20 +151,29 @@
             marketingShare.data.forEach((items,index)=>{
                 let tr = document.createElement("tr");
                 
-                let td = document.createElement("td");
+                // let td = document.createElement("td");
                 //將 items的排名放入 td.textContent(td的內容)
-                td.textContent = items.Ranking;
-                tr.append(td);
+                // td.textContent = items.Ranking;
+                // tr.append(td);
 
-                td = document.createElement("td");
-                //將 items的排名放入 td.textContent(td的內容)
-                td.textContent = items.Name;
-                tr.append(td);
+                // td = document.createElement("td");
+                // //將 items的排名放入 td.textContent(td的內容)
+                // td.textContent = items.Name;
+                // tr.append(td);
 
-                td = document.createElement("td");
-                //將 items的國家放入 td.textContent(td的內容)
-                td.textContent = items.Country;
-                tr.append(td);
+                // td = document.createElement("td");
+                // //將 items的國家放入 td.textContent(td的內容)
+                // td.textContent = items.Country;
+                // tr.append(td);
+
+                // 將上面的東西簡化
+                // 先抓物件的值
+                let itemsVal = Object.values(items);
+                itemsVal.forEach(item => {
+                    let td = document.createElement("td");
+                    td.textContent = item;
+                    tr.append(td);
+                })
 
                 td = document.createElement("td");
                 //將 items的市佔率放入 td.textContent(td的內容)
