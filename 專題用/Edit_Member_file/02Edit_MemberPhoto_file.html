@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://kit.fontawesome.com/4a910e584e.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- CSS RWD -->
+    <link rel="stylesheet" href="./RWD.css">
+
+    <!-- CSS 會員基本資料 -->
+    <link rel="stylesheet" href="./Edit_Member_file.css">
+
+    <title>02會員-個人圖示-編輯資料Edit_MemberPhoto_file</title>
+
+    <!-- CSS 這裡是最上面那個 -->
+    <style>
+        .header-box {
+            background: #F1E1FF;
+            flex: auto;
+            width: auto;
+            height: 7em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-box ml-3 mr-3">
+            <h1>這裡是最上面</h1>
+        </div>
+    </header>
+    <!-- ------------測試用------------- -->
+    <main id="samplecard" class="">
+        <!-- 下方區塊 (動態留言+個人狀態)  -->
+        
+        <div class="mb-3 mt-3">
+            <!-- 留言 + 新增留言 -->
+            <div class="card-Member-Comment mb-3 mt-3 p-3 mr-3 ml-3">
+                <div class="row g-0">
+                    <!-- 右邊那塊 -->
+                    <div class="col-md-4">
+                        <div class="card-body card">
+                            <!-- 顯示離線/上線狀態 -->
+                            <!-- 整個編輯清單 -->
+                            <div class="Edit-left-box">
+                                <!-- 返回個人檔案 -->
+                                <a href="../Member_basic_information/Member_basic_information.html"
+                                    class="btn btn-primary btn-block">返回個人檔案</a>
+                                <!-- 編輯清單 -->
+                                <div class="Edit-list mt-4 align-middle">
+                                    <!-- 一般 (個人圖示+個人檔案背景+迷你個人檔案+主題 -->
+                                    <a href="./01Edit_Member_file.html" class="list-group-item border-0"><span
+                                            class="fa fa-inbox mr-2"></span>一般</a>
+                                    <a href="./02Edit_MemberPhoto_file.html" class="list-group-item border-0"><span
+                                            class="fa fa-paper-plane mr-2"></span><b>個人圖示</b></a>
+                                    <a href="./03Edit_MemberBG_file.html" class="list-group-item border-0"><span
+                                            class="fa fa-star-o mr-2"></span>個人檔案背景</a>
+                                    <a href="./04Edit_MemberMini_file.html" class="list-group-item border-0"><span
+                                            class="fa fa-sellsy mr-2"></span>迷你個人檔案</a>
+                                    <a href="./05Edit_MemberTopic_file.html" class="list-group-item border-0"><span
+                                            class="fa fa-ticket mr-2"></span>主題</a>
+                                </div>
+                                <!-- 分隔線 -->
+                                <hr class="Edit-divider mt-1 m-b-10">
+                                </hr>
+                                <div class="list-group mail-list">
+                                    <a href="./06Edit_MemberPrivacy_file.html" class="list-group-item border-0"><span
+                                            class="fa fa-tags mr-2"></span>隱私設定</a>
+                                    <!-- <a href="#" class="list-group-item border-0"><span class="fa fa-briefcase f-s-14 mr-2"></span>Work</a> 
+                                        <a href="#" class="list-group-item border-0"><span class="fa fa-sellsy f-s-14 mr-2"></span>Private</a>
+                                        <a href="#" class="list-group-item border-0"><span class="fa fa-ticket f-s-14 mr-2"></span>Support</a>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 編輯畫面 2-->
+                    <div class="card-Edit2 col-md-8">
+                        <!-- 編輯畫面群組 -->
+                        <div class="Edit2-Group card">
+                            <div class="card-body">
+                                <!-- 關於個人圖示編輯的說明 -->
+                                <div class="Edit2-text">
+                                    <h5>個人圖示</h5>
+                                    <p>選擇您的個人圖示</p>
+                                    <b class="Edit2-textTitle"><!-- 分隔線 -->
+                                        <hr class="Edit-divider mt-1 m-b-10">
+                                        </hr>
+                                    </b>
+                                </div>
+
+                                <!-- 右邊上方按鈕們 -->
+                                <div class="Edit2-btn mb-3">
+                                    <button class="btn btn-info">確定編輯</button>
+                                    <button class="btn btn-warning ml-3">取消編輯</button>
+                                    
+                                </div>
+                                <!-- 每個編輯的title -->
+                                <div class="Edit2-textTitle"><!-- 分隔線 -->
+                                    <hr class="Edit-divider mt-1 m-b-10"></hr>
+                                </div>
+                                <!-- 個人圖示編輯主要部分 -->
+                                <div class="Edit2-main form-validation">
+                                    <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> <b>上傳您的個人圖示</b> </h5>
+                                    <input class="l-border-2" name="file" type="file" multiple="multiple">
+                                    <div class="text-left mt-2">
+                                        <button class="btn btn-primary" type="button"><i class="fa fa-paper-plane"></i> 確定上傳</button>
+                                        <button class="btn btn-dark ml-3" type="button"><i class="fa-solid fa-ban"></i> 取消上傳</button>
+                                    </div>
+                                    <!-- 每個編輯的title -->
+                                    <div class="Edit1-textTitle"><!-- 分隔線 -->
+                                        <b>推薦給您的其他頭貼</b>
+                                        <hr class="Edit-divider mt-1 m-b-10"></hr>
+                                    </div>
+                                    
+                                    <div class="row mt-3">
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="card p-5">
+                                                <img src="https://picsum.photos/100/100/?random=9">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="card p-5">
+                                                <img src="https://picsum.photos/100/100/?random=8">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="card p-5">
+                                                <img src="https://picsum.photos/100/100/?random=7">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="card p-5">
+                                                <img src="https://picsum.photos/100/100/?random=6">
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ------------測試用------------- -->
+
+    
+
+    <footer class="footer">
+        <div class="header-box ml-3 mr-3">
+            <h1>這裡是最下面</h1>
+        </div>
+    </footer>
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
