@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="./reset.css">
+
+    <title>Apple product</title>
+</head>
+
+<body>
+    <div id="products" class="mb-3 bg-info d-flex justify-content-center">
+    </div>
+    <div id="product-info" class="container">
+        <div class="row">
+            <div id="product-photo" class="col-12 col-md-7">
+            </div>
+            <div id="detail-selections" class="col-12 col-md-5 ">
+                <ul id="model-selection" class="">
+                </ul>
+                <ul id="specification-selection" class="">
+                </ul>
+                <h1 id="total-price" class="ms-3 text-center"></h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let dataStuct = [
+            {
+                name: 'iPhone',
+                baseImg: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-pro-family-select?wid=470&amp;hei=556&amp;fmt=jpeg&amp;qlt=95&amp;.v=1645811022162',
+                basePrice: 23900,
+                model: [
+                    {
+                        name: 'iPhone 13 Pro'
+                        , img: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-pro-family-select?wid=470&amp;hei=556&amp;fmt=jpeg&amp;qlt=95&amp;.v=1645811022162'
+                        , extraPrice: 0
+                    },
+                    {
+                        name: 'iPhone 13 Pro Max'
+                        , img: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-pro-max-family-select?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=90&amp;.v=1645811023243'
+                        , extraPrice: 3000
+                    }
+                ],
+                OutWard: [
+                    { color: '紅色', colorValue: '#ff0000', imageUrl: './img/iphone-red.png' },
+                    { color: '黃色', colorValue: '#ffff00', imageUrl: './img/iphone-yellow.png' },
+                    { color: '黑色', colorValue: '#000000', imageUrl: './img/iphone-black.png' },
+                ],
+                spec: [
+                    {
+                        size: '128GB'
+                        , extraPrice: 0
+                    },
+                    {
+                        size: '256GB'
+                        , extraPrice: 300
+                    },
+                    {
+                        size: '512GB'
+                        , extraPrice: 500
+                    }
+                ]
+            },
+            {
+                name: 'iPad',
+                baseImg: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-202203?wid=3530&hei=4000&fmt=jpeg&qlt=90&.v=1645665079887',
+                basePrice: 27900,
+                model: [
+                    {
+                        name: '9吋顯示器'
+                        , img: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-202104_GEO_TW?wid=485&amp;hei=510&amp;fmt=png-alpha&amp;.v=1617899803000'
+                        , extraPrice: 0
+                    },
+                    {
+                        name: '12.2吋顯示器'
+                        , img: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-202104_GEO_TW?wid=485&amp;hei=510&amp;fmt=png-alpha&amp;.v=1617903458000'
+                        , extraPrice: 5000
+                    }
+                ],
+                spec: [
+                    {
+                        size: '512GB'
+                        , extraPrice: 0
+                    },
+                    {
+                        size: '1TB'
+                        , extraPrice: 300
+                    }
+                ]
+            },
+            {
+                name: 'Mac',
+                baseImg: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-gold-select-201810?wid=539&hei=312&fmt=jpeg&qlt=95&.v=1633027804000,%20https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-gold-select-201810?wid=1078&hei=624&fmt=jpeg&qlt=90&.v=1633027804000%202x',
+                basePrice: 30900,
+                model: [
+                    {
+                        name: 'Mac'
+                        , img: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202110_GEO_TW?wid=904&hei=840&fmt=jpeg&qlt=95&.v=1647363032310,%20https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202110_GEO_TW?wid=1808&hei=1680&fmt=jpeg&qlt=90&.v=1647363032310%202x'
+                        , extraPrice: 0
+                    },
+                    {
+                        name: 'MacPro'
+                        , img: 'https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg'
+                        , extraPrice: 9000
+                    }
+                ],
+                spec: [
+                    {
+                        size: '256GB'
+                        , extraPrice: 0
+                    },
+                    {
+                        size: '512GB'
+                        , extraPrice: 250
+                    },
+                    {
+                        size: '1TB'
+                        , extraPrice: 550
+                    },
+                    {
+                        size: '2TB'
+                        , extraPrice: 800
+                    }
+                ]
+            },
+        ]
+        let products = document.getElementById("products");
+        let productPhoto = document.getElementById("product-photo");
+        let modelSelection = document.getElementById("model-selection");
+        let specification = document.getElementById("specification-selection");
+        let totalPrice = document.getElementById("total-price");
+
+
+        dataStuct.forEach(x => {
+            //產生商品按鈕
+            let name = document.createElement('a');
+            name.setAttribute('href', "#");
+            products.appendChild(name);
+            name.setAttribute('class', "btn btn-dark m-3");
+            name.innerText = x.name;
+            name.addEventListener('click', showInfo);
+
+            function showInfo() {
+                let modelChosen = false;
+                let specChosen = false;
+                let mXP = 0;
+                let sXP = 0;
+                totalPrice.innerText = ``;
+                // totalPrice.innerText =`原價 : ${x.basePrice}元`;
+                //圖片
+                productPhoto.innerText = "";
+                let baseImg = document.createElement('img');
+                productPhoto.appendChild(baseImg);
+                baseImg.setAttribute('src', x.baseImg);
+                baseImg.setAttribute('class', "w-100");
+
+                //機型+圖
+                modelSelection.innerHTML = "<h2>選擇機型</h2>";
+                x.model.forEach(m => {
+                    let li = document.createElement('li');
+                    modelSelection.appendChild(li);
+
+                    let a = document.createElement('a');
+                    li.appendChild(a);
+                    a.setAttribute('href', "#");
+                    a.setAttribute('class', "btn btn-success ms-5 my-1 d-flex flex-column align-items-center");
+
+
+                    a.innerHTML = `
+            <sapn>${m.name}</sapn>
+            <span>+${m.extraPrice}元</span>`;
+
+                    a.addEventListener('click', event => {
+                        baseImg.setAttribute('src', m.img);
+                        modelChosen = true;
+                        mXP = m.extraPrice;
+                        //算錢
+                        showPrice();
+                    });
+                });
+
+                //規格
+                specification.innerHTML = "<h2>選擇規格</h2>";
+                x.spec.forEach(s => {
+                    let li = document.createElement('li');
+                    specification.appendChild(li);
+
+                    let a = document.createElement('a');
+                    li.appendChild(a);
+                    a.setAttribute('href', "#");
+                    a.setAttribute('class', "btn btn-danger ms-5 my-1 d-flex flex-column align-items-center");
+                    a.innerHTML = `
+            <sapn>${s.size}</sapn>
+            <span>+${s.extraPrice}元</span>`;
+
+                    a.addEventListener('click', event => {
+                        specChosen = true;
+                        sXP = s.extraPrice;
+                        //算錢
+                        showPrice();
+                    });
+                });
+                function showPrice() {
+                    if (modelChosen && specChosen) {
+                        totalPrice.innerText = `總價 : ${x.basePrice + mXP + sXP}元`;
+                    }
+                }
+            }
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
