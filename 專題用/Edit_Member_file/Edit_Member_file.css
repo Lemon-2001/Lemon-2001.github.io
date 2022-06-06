@@ -1,10 +1,10 @@
 .card {
   max-width: 1200px;
-  background-color: #D2E9FF;
+  background-color: #CDA581;
 }
 
 .card-Member-Comment {
-  background-color: #F0FFF0;
+  background-color: #ceb195;
 }
 
 .card-Edit_Member .email-left-box {
@@ -12,4 +12,22 @@
   width: 240px;
   float: left;
   padding: 0 20px 20px 10px;
+}
+
+.Edit2-PhotoBox img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.Edit2-recoPhoto .photo1:hover {
+  background-color: #CDA581;
+}
+.Edit2-recoPhoto .photo2:hover {
+  background-color: #b0906f;
+}
+.Edit2-recoPhoto .photo3:hover {
+  background-color: #c7826b;
+}
+.Edit2-recoPhoto .photo4:hover {
+  background-color: #e5a672;
 }/*# sourceMappingURL=Edit_Member_file.css.map */

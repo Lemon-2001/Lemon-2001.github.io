@@ -13,7 +13,7 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <!-- CSS RWD -->
-    <link rel="stylesheet" href="./RWD.css">
+    <link rel="stylesheet" href="../RWD.css">
 
     <!-- CSS 會員基本資料 -->
     <link rel="stylesheet" href="./Edit_Member_file.css">
@@ -23,7 +23,7 @@
     <!-- CSS 這裡是最上面那個 -->
     <style>
         .header-box {
-            background: #F1E1FF;
+            background: #9A484C;
             flex: auto;
             width: auto;
             height: 7em;
@@ -41,7 +41,7 @@
     <!-- ------------測試用------------- -->
     <main id="samplecard" class="">
         <!-- 下方區塊 (動態留言+個人狀態)  -->
-        
+
         <div class="mb-3 mt-3">
             <!-- 留言 + 新增留言 -->
             <div class="card-Member-Comment mb-3 mt-3 p-3 mr-3 ml-3">
@@ -91,7 +91,8 @@
                                 <div class="Edit2-text">
                                     <h5>個人圖示</h5>
                                     <p>選擇您的個人圖示</p>
-                                    <b class="Edit2-textTitle"><!-- 分隔線 -->
+                                    <b class="Edit2-textTitle">
+                                        <!-- 分隔線 -->
                                         <hr class="Edit-divider mt-1 m-b-10">
                                         </hr>
                                     </b>
@@ -101,48 +102,64 @@
                                 <div class="Edit2-btn mb-3">
                                     <button class="btn btn-info">確定編輯</button>
                                     <button class="btn btn-warning ml-3">取消編輯</button>
-                                    
+
                                 </div>
                                 <!-- 每個編輯的title -->
-                                <div class="Edit2-textTitle"><!-- 分隔線 -->
-                                    <hr class="Edit-divider mt-1 m-b-10"></hr>
+                                <div class="Edit2-textTitle">
+                                    <!-- 分隔線 -->
+                                    <hr class="Edit-divider mt-1 m-b-10">
+                                    </hr>
                                 </div>
                                 <!-- 個人圖示編輯主要部分 -->
                                 <div class="Edit2-main form-validation">
-                                    <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> <b>上傳您的個人圖示</b> </h5>
-                                    <input class="l-border-2" name="file" type="file" multiple="multiple">
+                                    <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> <b>上傳您的個人圖示</b>
+                                    </h5>
+
+                                    <!-- Star 在當前頁面實現預覽效果 -->
+                                    <div id="Edit2-PhotoBtn">
+                                        <input class="l-border-2" type="file" multiple="multiple"
+                                            accept="image/*">
+                                    </div>
+                                    <div id="Edit2-PhotoBox">
+                                        <img />
+                                    </div>
+                                    <!-- End 在當前頁面實現預覽效果 -->
                                     <div class="text-left mt-2">
-                                        <button class="btn btn-primary" type="button"><i class="fa fa-paper-plane"></i> 確定上傳</button>
-                                        <button class="btn btn-dark ml-3" type="button"><i class="fa-solid fa-ban"></i> 取消上傳</button>
+                                        <button class="btn btn-primary" type="button"><i class="fa fa-paper-plane"></i>
+                                            確定上傳</button>
+                                        <button class="btn btn-dark ml-3" type="button"><i class="fa-solid fa-ban"></i>
+                                            取消上傳</button>
                                     </div>
                                     <!-- 每個編輯的title -->
-                                    <div class="Edit1-textTitle"><!-- 分隔線 -->
+                                    <div class="Edit2-textTitle">
+                                        <!-- 分隔線 -->
                                         <b>推薦給您的其他頭貼</b>
-                                        <hr class="Edit-divider mt-1 m-b-10"></hr>
+                                        <hr class="Edit-divider mt-1 m-b-10">
+                                        </hr>
                                     </div>
-                                    
-                                    <div class="row mt-3">
+
+                                    <div class="Edit2-recoPhoto row mt-3">
                                         <div class="col-lg-3 col-sm-6">
-                                            <div class="card p-5">
-                                                <img src="https://picsum.photos/100/100/?random=9">
+                                            <div class="card p-3 btn photo1">
+                                                <img src="../圖片/1.jpg">
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-sm-6">
-                                            <div class="card p-5">
-                                                <img src="https://picsum.photos/100/100/?random=8">
+                                            <div class="card p-3 btn photo2">
+                                                <img src="../圖片/2.jpg">
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-sm-6">
-                                            <div class="card p-5">
-                                                <img src="https://picsum.photos/100/100/?random=7">
+                                        <div class="col-lg-3 col-sm-6 ">
+                                            <div class="card p-3 btn photo3">
+                                                <img src="../圖片/3.jpg">
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-sm-6">
-                                            <div class="card p-5">
-                                                <img src="https://picsum.photos/100/100/?random=6">
+                                        <div class="col-lg-3 col-sm-6 ">
+                                            <div class="card p-3 btn photo4">
+                                                <img src="../圖片/4.jpg">
                                             </div>
                                         </div>
-                    
+
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +171,7 @@
     </main>
     <!-- ------------測試用------------- -->
 
-    
+
 
     <footer class="footer">
         <div class="header-box ml-3 mr-3">
@@ -168,6 +185,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
+
+    <!-- 在當前頁面實現預覽效果 -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $('input').on('change', function (e) {
+            const file = this.files[0];
+            const objectURL = URL.createObjectURL(file);
+            $('img').attr('src', objectURL);
+        });
+    </script>
 
 </body>
 
