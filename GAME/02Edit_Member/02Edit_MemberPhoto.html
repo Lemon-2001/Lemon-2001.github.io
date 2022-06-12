@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/forum.css">
+    <link rel="stylesheet" href="./information.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>02會員編輯-01Edit_Member</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-box">
+            <nav class="header-box-nav">
+                <div class="header-box-nav-content">
+                    <button class="btn header-box-nav-content-collapse">
+                        <ion-icon class="icon" name="arrow-back-outline"></ion-icon>
+                    </button>
+                    <ul class="list-group header-box-nav-content-tours">
+                        <li class="list-tour-home" style="--clr:#f44336">
+                            <a href="#home">
+                                <span class="icon">
+                                    <ion-icon name="home-outline"></ion-icon>
+                                </span>
+                                <span>首頁</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-shop" style="--clr:#ffa500">
+                            <a href="#shop">
+                                <span class="icon">
+                                    <ion-icon name="storefront-outline"></ion-icon>
+                                </span>
+                                <span>商店</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-game" style="--clr:#FFD700">
+                            <a href="#game">
+                                <span class="icon">
+                                    <ion-icon name="game-controller-outline"></ion-icon>
+                                </span>
+                                <span>遊戲庫</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-forum active" style="--clr:#0fc70f">
+                            <a href="#forum">
+                                <span class="icon">
+                                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                                </span>
+                                <span>論壇</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-friend " style="--clr:#2196f3">
+                            <a href="#friend">
+                                <span class="icon">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span>好友</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-about" style="--clr:#b145e9">
+                            <a href="#about">
+                                <span class="icon">
+                                    <ion-icon name="help-circle-outline"></ion-icon>
+                                </span>
+                                <span>關於我們</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-box-tool">
+                <div class="nav-toggler"></div>
+                <ion-icon class="sidebar-toggler" name="arrow-forward-outline"></ion-icon>
+                <a href="#LOGO" class="navbar-brand logo h1">SOLO GAME</a>
+                <form class="form-inline search-form">
+                    <input class="form-control " type="search" placeholder="搜尋">
+                    <button class="btn search-form-btn" type="button"></button>
+                </form>
+                <div class="navbar-brand header-box-tool-end">
+                    <div class="dropdown">
+                        <button class="bell" type="button" id="bell-list" data-toggle="dropdown"
+                            aria-expanded="false" data-offset="-120,0"></button>
+                        <div class="dropdown-menu" aria-labelledby="bell-list">
+                            <div href="#" class="dropdown-item">訊息1</div>
+                            <div href="#" class="dropdown-item">訊息2</div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="login" type="button" id="user-list" data-toggle="dropdown"
+                            aria-expanded="false" data-offset="-120,0"></button>
+                        <div class="dropdown-menu" aria-labelledby="user-list">
+                            <a href="#" class="dropdown-item">註冊登入</a>
+                            <a href="#" class="dropdown-item">個人資料</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--**********************************
+            Content body start
+        ***********************************-->
+    <main id="forum" class="container-fluid">
+        <!-- 下方區塊 (動態留言+個人狀態)  -->
+        
+        <div class="mb-3 mt-3 ml-5">
+            <!-- 留言 + 新增留言 -->
+            <div class="card-Member-Comment mb-3 mt-3 p-3 mr-3 ml-3">
+                <div class="row g-0">
+                    <!-- 右邊那塊 -->
+                    <div class="col-md-4">
+                        <div class="card-body card">
+                            <!-- 顯示離線/上線狀態 -->
+                            <!-- 整個編輯清單 -->
+                            <div class="Edit-left-box">
+                                <!-- 返回個人檔案 -->
+                                <a href="../01Member__information/01information.html"
+                                    class="btn btn-primary btn-block">返回個人檔案</a>
+                                <!-- 編輯清單 -->
+                                <div class="Edit-list mt-4 align-middle">
+                                    <!-- 一般 (個人圖示+個人檔案背景+迷你個人檔案+主題 -->
+                                    <a href="./01Edit_Member.html" class="list-group-item border-0"><span
+                                            class="fa fa-inbox mr-2"></span><b>一般</b></a>
+                                    <a href="./02Edit_MemberPhoto.html" class="list-group-item border-0"><span
+                                            class="fa fa-paper-plane mr-2"></span>個人圖示</a>
+                                    
+                                    <a href="./05Edit_MemberTopic.html" class="list-group-item border-0"><span
+                                            class="fa fa-ticket mr-2"></span>主題</a>
+                                </div>
+                                <!-- 分隔線 -->
+                                <hr class="Edit-divider mt-1 m-b-10">
+                                </hr>
+                                <div class="list-group mail-list">
+                                    <a href="./06Edit_MemberPrivacy.html" class="list-group-item border-0"><span
+                                            class="fa fa-tags mr-2"></span>隱私設定</a>
+                                    <!-- <a href="#" class="list-group-item border-0"><span class="fa fa-briefcase f-s-14 mr-2"></span>Work</a> 
+                                        <a href="#" class="list-group-item border-0"><span class="fa fa-sellsy f-s-14 mr-2"></span>Private</a>
+                                        <a href="#" class="list-group-item border-0"><span class="fa fa-ticket f-s-14 mr-2"></span>Support</a>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 編輯畫面 2-->
+                    <div class="card-Edit2 col-md-8">
+                        <!-- 編輯畫面群組 -->
+                        <div class="Edit2-Group card">
+                            <div class="card-body">
+                                <!-- 關於個人圖示編輯的說明 -->
+                                <div class="Edit2-text">
+                                    <h5>個人圖示</h5>
+                                    <p>選擇您的個人圖示</p>
+                                    <b class="Edit2-textTitle">
+                                        <!-- 分隔線 -->
+                                        <hr class="Edit-divider mt-1 m-b-10">
+                                        </hr>
+                                    </b>
+                                </div>
+
+                                <!-- 右邊上方按鈕們 -->
+                                <div class="Edit2-btn mb-3">
+                                    <button class="btn btn-info">確定編輯</button>
+                                    <button class="btn btn-warning ml-3">取消編輯</button>
+
+                                </div>
+                                <!-- 每個編輯的title -->
+                                <div class="Edit2-textTitle">
+                                    <!-- 分隔線 -->
+                                    <hr class="Edit-divider mt-1 m-b-10">
+                                    </hr>
+                                </div>
+                                <!-- 個人圖示編輯主要部分 -->
+                                <div class="Edit2-main form-validation">
+                                    <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> <b>上傳您的個人圖示</b>
+                                    </h5>
+
+                                    <!-- Star 在當前頁面實現預覽效果 -->
+                                    <div id="Edit2-PhotoBtn">
+                                        <input class="l-border-2" type="file" multiple="multiple"
+                                            accept="image/*">
+                                    </div>
+                                    <div id="Edit2-PhotoBox">
+                                        <img />
+                                    </div>
+                                    <!-- End 在當前頁面實現預覽效果 -->
+                                    <div class="text-left mt-2">
+                                        <button class="btn btn-primary" type="button"><i class="fa fa-paper-plane"></i>
+                                            確定上傳</button>
+                                        <button class="btn btn-dark ml-3" type="button"><i class="fa-solid fa-ban"></i>
+                                            取消上傳</button>
+                                    </div>
+                                    <!-- 每個編輯的title -->
+                                    <div class="Edit2-textTitle">
+                                        <!-- 分隔線 -->
+                                        <b>推薦給您的其他頭貼</b>
+                                        <hr class="Edit-divider mt-1 m-b-10">
+                                        </hr>
+                                    </div>
+
+                                    <div class="Edit2-recoPhoto row mt-3">
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="card p-3 btn photo1">
+                                                <img src="../圖片/1.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                            <div class="card p-3 btn photo2">
+                                                <img src="../圖片/2.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 ">
+                                            <div class="card p-3 btn photo3">
+                                                <img src="../圖片/3.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 ">
+                                            <div class="card p-3 btn photo4">
+                                                <img src="../圖片/4.jpg">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+    <footer>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cdc90ce112.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/forum.js"></script>
+
+    <!-- 在當前頁面實現預覽效果 -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $('input').on('change', function (e) {
+            const file = this.files[0];
+            const objectURL = URL.createObjectURL(file);
+            $('img').attr('src', objectURL);
+        });
+    </script>
+
+</body>
+
+</html>
